@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('blocs/header') -%>
+    <h1>Сторінка користувача: <%= username %></h1>
+    <% if(username.toLowerCase() == 'john') { %>
+        <ul>
+            <% hobbies.forEach((el) => { %>
+               <li><%= el %></li> 
+            <% }) %>
+        </ul>
+    <% } %>
+</body>
+</html>
